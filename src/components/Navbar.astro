@@ -1,0 +1,174 @@
+---
+
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleClick() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Desplazamiento suave
+      });
+    }
+
+    const homeLink = document.querySelector("#logo");
+    if (homeLink) {
+      homeLink.addEventListener("click", handleClick);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleClick() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Desplazamiento suave
+      });
+    }
+
+    const homeLink = document.querySelector("#inicio");
+    if (homeLink) {
+      homeLink.addEventListener("click", handleClick);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleClick() {
+      window.scrollTo({
+        top: 1600,
+        behavior: "smooth", // Desplazamiento suave
+      });
+    }
+
+    const homeLink = document.querySelector("#galeria");
+    if (homeLink) {
+      homeLink.addEventListener("click", handleClick);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleClick() {
+      window.scrollTo({
+        top: 900,
+        behavior: "smooth", // Desplazamiento suave
+      });
+    }
+
+    const homeLink = document.querySelector("#about");
+    if (homeLink) {
+      homeLink.addEventListener("click", handleClick);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleClick() {
+      window.scrollTo({
+        top: 2500,
+        behavior: "smooth", // Desplazamiento suave
+      });
+    }
+
+    const homeLink = document.querySelector("#contacto");
+    if (homeLink) {
+      homeLink.addEventListener("click", handleClick);
+    }
+  });
+</script>
+
+<header class="header">
+  <div class="logoContainer">
+    <img id="logo" class="logo" src="caras2rw.png" alt="" />
+  </div>
+  <ul class="ul">
+    <li id="inicio">
+      {" "}
+      Inicio
+    </li>
+    <li id="about">Sobre mi</li>
+    <li id="galeria">Galeria</li>
+    <li id="contacto">Contacto</li>
+  </ul>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #060606;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+  }
+
+  .logoContainer {
+    position: relative;
+  }
+
+  .logo {
+    width: 45px;
+    cursor: pointer;
+  }
+
+  .cara2 {
+    width: 45px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: efecto auto linear;
+    animation-timeline: scroll(root block);
+  }
+
+  @keyframes efecto {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+
+  .ul li {
+    cursor: pointer;
+    transition: color ease 0.2s;
+  }
+
+  .ul li:hover {
+    color: #7a0c1e;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header {
+      padding: 0 5%;
+    }
+
+    .ul {
+      display: flex;
+      list-style: none;
+      gap: 15px;
+      font-size: 16px;
+      color: whitesmoke;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      font-size: 16px;
+      color: whitesmoke;
+    }
+  }
+</style>

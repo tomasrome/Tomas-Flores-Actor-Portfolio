@@ -1,0 +1,90 @@
+---
+
+---
+
+<section class="section">
+  <img class="caretas" src="caretas.png" alt="" />
+  <div class="container">
+    <img src="about.webp" alt="" />
+    <div class="about">
+      <h2>Un poco sobre mi</h2>
+      <p>
+        ¡Hola! Soy Tomás Flores, un apasionado del teatro desde la infancia.
+        Desde mis primeros pasos en el escenario escolar hasta mi formación en
+        reconocidas escuelas de teatro, he dedicado mi vida a contar historias y
+        conectar con el público a través de la actuación.<br /><br />
+
+        He tenido el privilegio de interpretar una amplia variedad de personajes
+        memorables en diferentes producciones teatrales. Además, comparto mi
+        pasión como profesor de teatro en una escuela de artes escénicas, donde
+        guío a la próxima generación de artistas.<br /><br />
+
+        Mi objetivo es seguir creciendo como actor y explorar nuevas
+        oportunidades en el mundo del teatro. Sueño con participar en
+        producciones innovadoras y continuar inspirando a otros con mi trabajo
+        en el escenario y en el aula.<br /><br />
+
+        Gracias por visitar mi portfolio. ¡Espero que disfrutes explorando mi
+        trabajo y compartiendo esta pasión por el teatro conmigo!
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    background: #7a0c1e;
+    position: relative;
+  }
+
+  .caretas {
+    height: 120px;
+    position: absolute;
+    top: 50px;
+    right: 10%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 10%;
+  }
+
+  .about {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+  }
+
+  div img {
+    height: 500px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  h2 {
+    text-decoration: underline;
+  }
+
+  p {
+    max-width: 800px;
+    line-height: 25px;
+    text-wrap: pretty;
+  }
+
+  @media screen and (max-width: 1050px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10%;
+      gap: 10%;
+    }
+  }
+</style>
