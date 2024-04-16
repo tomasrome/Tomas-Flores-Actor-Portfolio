@@ -61,7 +61,7 @@
   }
 
   .container {
-    margin: 150px 7% 0 0;
+    margin: 100px 7% 0 0;
     border: 2px solid #ffffff;
     position: relative;
     width: 30%;
@@ -73,26 +73,29 @@
     align-items: center;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1300px) {
     .section {
-      background-image: url("mobile.webp");
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
+      background-image: url("/Tomas-Flores-Actor-Portfolio/1300.jpg");
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .section {
+      background-image: url("/Tomas-Flores-Actor-Portfolio/mobile1.jpg");
     }
 
     .header {
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      justify-content: start;
       align-items: center;
-      padding: 80px 0;
+      padding: 50px 0;
     }
 
     .container {
       margin: 0;
       margin-bottom: 20px;
       min-width: 350px;
+      height: 250px;
     }
 
     .header h1 {
@@ -101,6 +104,50 @@
 
     .header p {
       font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .section {
+      background-image: url("/Tomas-Flores-Actor-Portfolio/mobile.webp");
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .container {
+      margin: 0;
+      margin-bottom: 20px;
+      min-width: 80%;
+      height: 250px;
+      object-fit: contain;
+    }
+
+    .container h1 {
+      font-size: 70px;
+    }
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 1150px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      padding: 50px 0;
+    }
+
+    .container {
+      margin: 0;
+      margin-bottom: 20px;
+      min-width: 377px;
+      height: 250px;
+    }
+
+    .container h1 {
+      font-size: 70px;
     }
   }
 </style>
