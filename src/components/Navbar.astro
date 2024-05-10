@@ -16,6 +16,19 @@
       homeLink.addEventListener("click", handleClick);
     }
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleClick() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Desplazamiento suave
+      });
+    }
+
+    const homeLink = document.querySelector("#tomas");
+    if (homeLink) {
+      homeLink.addEventListener("click", handleClick);
+    }
+  });
 
   document.addEventListener("DOMContentLoaded", function () {
     function handleClick() {
@@ -34,7 +47,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     function handleClick() {
       window.scrollTo({
-        top: 1600,
+        top: 1630,
         behavior: "smooth", // Desplazamiento suave
       });
     }
@@ -82,7 +95,7 @@
       src="/Tomas-Flores-Actor-Portfolio/caras2rw.webp"
       alt=""
     />
-    <span>TOMÁS <strong>FLORES</strong></span>
+    <span id="tomas">TOMÁS <strong>FLORES</strong></span>
   </div>
   <ul class="ul">
     <li id="inicio">
@@ -123,6 +136,7 @@
     font-style: italic;
     color: white;
     font-weight: 700;
+    cursor: pointer;
   }
 
   .logoContainer span strong {
