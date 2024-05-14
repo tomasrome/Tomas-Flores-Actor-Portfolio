@@ -79,7 +79,9 @@
 <script>
   const lightbox = document.getElementById("lightbox");
   const thumbnail = document.querySelectorAll(".galeria img");
-  const fullImage = document.getElementById("full-img");
+  const fullImage = document.getElementById(
+    "full-img"
+  ) as HTMLImageElement | null;
   const prevBtn = document.getElementById("prev");
   const prevMobile = document.getElementById("prev-mobile");
   const nextBtn = document.getElementById("next");
@@ -87,34 +89,44 @@
 
   let currentImageIndex = 0;
 
-  function openLightbox(imageSrc) {
-    fullImage.src = imageSrc;
-    lightbox.style.display = "flex";
+  function openLightbox(imageSrc: string) {
+    if (fullImage && lightbox) {
+      fullImage.src = imageSrc;
+      lightbox.style.display = "flex";
+    }
   }
 
   function closeLightbox() {
-    lightbox.style.display = "none";
+    if (lightbox) {
+      lightbox.style.display = "none";
+    }
   }
 
   function showPrevImage() {
     currentImageIndex =
       (currentImageIndex - 1 + thumbnail.length) % thumbnail.length;
     const nextImageSrc = thumbnail[currentImageIndex].getAttribute("data-full");
-    openLightbox(nextImageSrc);
+    if (nextImageSrc) {
+      openLightbox(nextImageSrc);
+    }
   }
 
   function showNextImage() {
     currentImageIndex =
       (currentImageIndex + 1 + thumbnail.length) % thumbnail.length;
     const nextImageSrc = thumbnail[currentImageIndex].getAttribute("data-full");
-    openLightbox(nextImageSrc);
+    if (nextImageSrc) {
+      openLightbox(nextImageSrc);
+    }
   }
 
   thumbnail.forEach((image, index) => {
     image.addEventListener("click", () => {
       currentImageIndex = index;
       const fullImageSrc = image.getAttribute("data-full");
-      openLightbox(fullImageSrc);
+      if (fullImageSrc) {
+        openLightbox(fullImageSrc);
+      }
     });
   });
 
@@ -124,8 +136,8 @@
   prevMobile?.addEventListener("click", showPrevImage);
 
   window.addEventListener("click", (event) => {
-    if (event.target == lightbox) {
-      lightbox.style.display = "none";
+    if (event.target === lightbox) {
+      closeLightbox();
     }
   });
 </script>
