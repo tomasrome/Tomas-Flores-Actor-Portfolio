@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/sitemap-index.xml
