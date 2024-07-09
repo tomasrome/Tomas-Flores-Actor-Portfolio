@@ -72,6 +72,7 @@
     <div class="btn-container">
       <i id="prev-mobile" class="fa-solid fa-circle-arrow-left light-btn"></i>
       <i id="next" class="fa-solid fa-circle-arrow-right light-btn"></i>
+      <i id="close_mobile" class="fa-solid fa-circle-xmark"></i>
     </div>
   </div>
 </aside>
@@ -86,6 +87,7 @@
   const prevMobile = document.getElementById("prev-mobile");
   const nextBtn = document.getElementById("next");
   const close = document.getElementById("close");
+  const closeMobile = document.getElementById("close_mobile");
 
   let currentImageIndex = 0;
 
@@ -131,6 +133,7 @@
   });
 
   close?.addEventListener("click", closeLightbox);
+  closeMobile?.addEventListener("click", closeLightbox);
   prevBtn?.addEventListener("click", showPrevImage);
   nextBtn?.addEventListener("click", showNextImage);
   prevMobile?.addEventListener("click", showPrevImage);
@@ -230,6 +233,15 @@
     color: #5f1521;
   }
 
+  #close_mobile {
+    display: none;
+    text-decoration: none;
+    font-size: 50px;
+    text-align: center;
+    color: #7a0c1e;
+    cursor: pointer;
+  }
+
   #prev-mobile {
     display: none;
   }
@@ -246,7 +258,14 @@
 
   @media screen and (max-width: 900px) {
     #close {
+      display: none;
       top: 5%;
+      right: 5%;
+    }
+
+    #close_mobile {
+      display: block;
+      position: absolute;
       right: 5%;
     }
 
@@ -265,6 +284,8 @@
 
     .btn-container {
       width: 100%;
+      position: absolute;
+      bottom: 10%;
     }
   }
 </style>
