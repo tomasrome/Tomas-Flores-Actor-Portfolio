@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/</loc>
+    <image:image>
+      <image:loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/gallery/tomas-flores-actor-escena-teatro-thumb-1.webp</image:loc>
+      <image:title>Tomas Flores - Actor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/gallery/tomas-flores-actor-escena-teatro-thumb-2.webp</image:loc>
+      <image:title>Tomas Flores - Actor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/gallery/tomas-flores-actor-escena-teatro-thumb-3.webp</image:loc>
+      <image:title>Tomas Flores - Actor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/gallery/tomas-flores-actor-escena-teatro-thumb-9.webp</image:loc>
+      <image:title>Tomas Flores, actor en una escena teatral</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/gallery/tomas-flores-actor-escena-teatro-thumb-5.webp</image:loc>
+      <image:title>Tomas Flores - Actor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/gallery/tomas-flores-actor-escena-teatro-thumb-6.webp</image:loc>
+      <image:title>Tomas Flores - Actor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/gallery/tomas-flores-actor-escena-teatro-thumb-7.webp</image:loc>
+      <image:title>Tomas Flores - Actor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomasrome.github.io/Tomas-Flores-Actor-Portfolio/gallery/tomas-flores-actor-escena-teatro-thumb-8.webp</image:loc>
+      <image:title>Tomas Flores - Actor</image:title>
+    </image:image>
+  </url>
+</urlset>
