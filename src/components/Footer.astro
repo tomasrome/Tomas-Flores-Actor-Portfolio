@@ -8,6 +8,32 @@
       <p>Tomás Flores - Portfolio de actor</p>
       <p>2024</p>
     </header>
+    <ul class="links">
+      <li>
+        <a
+          rel="noreferrer noopener"
+          target="_blank"
+          href="https://www.instagram.com/tomif1998/"
+          ><i class="fa-brands fa-instagram"></i></a
+        >
+      </li>
+
+      <li>
+        <a
+          rel="noreferrer noopener"
+          href="https://www.facebook.com/tomas.flores.5661"
+          target="_blank"><i class="fa-brands fa-facebook"></i></a
+        >
+      </li>
+
+      <li>
+        <a
+          href="https://wa.me/5491141474625"
+          target="_blank"
+          rel="noreferrer noopener"><i class="fa-brands fa-whatsapp"></i></a
+        >
+      </li>
+    </ul>
   </footer>
 </section>
 
@@ -19,6 +45,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    position: relative;
   }
 
   header {
@@ -26,5 +53,46 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .links i {
+    color: white;
+    font-size: 20px;
+  }
+
+  .links i:hover {
+    color: #7a0c1e;
+    transition: color ease 0.3s;
+  }
+
+  @media screen and (max-width: 800px) {
+    .links {
+      right: 2%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    section {
+      height: fit-content;
+      padding: 5px;
+    }
+
+    .links {
+      margin-top: 5px;
+      position: relative;
+      transform: none;
+      justify-content: center;
+    }
   }
 </style>
