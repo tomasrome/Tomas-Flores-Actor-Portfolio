@@ -1,14 +1,48 @@
+<script>
+  var thumbnail = document.getElementById("custom-thumbnail");
+  if (thumbnail) {
+    thumbnail.onclick = function () {
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube.com/embed/wO7c-x22qD0?autoplay=1";
+      iframe.style.position = "absolute";
+      iframe.style.top = "0";
+      iframe.style.left = "0";
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.frameBorder = "0";
+      iframe.allow = "autoplay; encrypted-media";
+      iframe.allowFullscreen = true;
+
+      var container = document.getElementById("video-container");
+      if (container) {
+        container.innerHTML = "";
+        container.appendChild(iframe);
+      } else {
+        console.error(
+          "El elemento con ID 'video-container' no fue encontrado."
+        );
+      }
+    };
+  } else {
+    console.error("El elemento con ID 'custom-thumbnail' no fue encontrado.");
+  }
+</script>
+
 <section class="projects-section">
   <div class="projects-container">
-    <h1>Ultimos Proyectos</h1>
+    <h1>Últimos Proyectos</h1>
     <div class="projects">
-      <h2>Sombrales</h2>
-      <div class="video-container">
-        <lite-youtube class="video" videoid="8rffuz7cgtY"></lite-youtube>
+      <div id="video-container" class="video-wrapper">
+        <img
+          id="custom-thumbnail"
+          src="/Tomas-Flores-Actor-Portfolio/somb.jpg"
+          style="width: 100%; height: 100%; cursor: pointer;"
+        />
+        <p class="corto">Cortometraje</p>
       </div>
       <p>
         - Tomás llega al pueblo de Sombrales en busca de su esposa desaparecida,
-        pero lo que va a encontrar ahí es algo mucho mas inquietante -
+        pero lo que va a encontrar ahí es algo mucho más inquietante -
       </p>
     </div>
   </div>
@@ -16,7 +50,7 @@
 
 <style>
   .projects-section {
-    background-color: #8f1d30;
+    background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +66,7 @@
   }
 
   h1 {
-    color: #fff;
+    color: #222222;
     font-size: 50px;
     margin-bottom: 40px;
   }
@@ -42,30 +76,83 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #111;
-    padding: 20px 0;
-    border: 5px solid black;
+    background-color: #fff;
+    padding-bottom: 20px;
+    border: 5px solid #e0e0e0;
     gap: 20px;
     width: 900px;
   }
 
-  h2 {
-    color: #fff;
-    font-size: 40px;
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    background-color: #000;
   }
 
-  .video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .video-wrapper iframe,
+  .video-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #6f1927;
+    height: 100%;
+  }
+
+  #custom-thumbnail:hover {
+    opacity: 0.7;
+  }
+
+  .corto {
+    position: absolute;
+    background-color: #7a0c1e;
+    margin: 0;
+    padding: 5px 7px;
+    left: 10px;
+    top: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    letter-spacing: 2px;
   }
 
   p {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: #666666;
     margin: 0 20px;
+  }
+
+  /* Responsividad */
+  @media screen and (max-width: 900px) {
+    .projects {
+      width: 85vw;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    p {
+      font-size: 15px;
+    }
+
+    .corto {
+      font-size: 10px;
+      left: 5px;
+      top: 5px;
+      padding: 3px 5px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    h1 {
+      font-size: 30px;
+    }
   }
 </style>
